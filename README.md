@@ -1,11 +1,10 @@
-## SWG Aftermath ##
+## SWG Executor ##
 
-* [![Discord](https://discordapp.com/api/guilds/305064511533088770/widget.png)](https://discord.gg/DNTBagP) [![GitHub Commits](https://img.shields.io/github/last-commit/SWGAftermath/Aftermath.svg?color=FF0000&style=plastic)](https://github.com/SWGAftermath/Aftermath/commits/main) [![vote for aftermath](https://img.shields.io/badge/Vote%20for%20Aftermath-Click%20Here-red?color=FF0000&style=plastic)](https://topg.org/swg-private-servers/in-486823)
-
-## Aftermath Credits and Thanks ##
+## Executor Credits and Thanks ##
 
 A big thank you to people who have shared their hard work with the community and also to the members of the SWGEmu team for sharing their code and hard work. Thank you and full credit to the following people:
 
+  * SWGAftermath - Base code
   * SWGEmu - Core3 & engine usage.
   * ModTheGalaxy - ModTheGalaxy Tre/LUA usage and ArmorObjectMenuComponent.cpp recolor update.
   * Holocron Team - Being helpful and providing guidance when in need.
