@@ -140,10 +140,13 @@ Core3 = {
 
 
 	-- Where tre files are stored
-	TrePath = "/home/swgemu/Desktop/SWGEmu",
+	TrePath = "/home/swgemu/SWGExecutor/tre",
 
 	-- Each tre file (order is important!)
 	TreFiles = {
+	"executor_species.tre",	
+	"hologram.tre",	
+	"mechanic.tre",
 	"aftermath_1.tre",
 	"aftermath_NGE.tre",
 	"aftermath_house.tre",
