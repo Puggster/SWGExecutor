@@ -100,7 +100,7 @@ Core3 = {
 	--"creature_test",
 	"dantooine",
 	"dathomir",
-	"dungeon1",
+	-- "dungeon1",
 	"endor",
 	--"endor_asommers",
 	--"floratest",
@@ -144,9 +144,9 @@ Core3 = {
 
 	-- Each tre file (order is important!)
 	TreFiles = {
-	"executor_species.tre",	
-	"hologram.tre",	
-	"mechanic.tre",
+	-- "species.tre",	
+	-- "hologram.tre",	
+	-- "mechanic.tre",
 	"aftermath_1.tre",
 	"aftermath_NGE.tre",
 	"aftermath_house.tre",

@@ -44,8 +44,8 @@
 object_building_player_player_merchant_tent_style_03 = object_building_player_shared_player_merchant_tent_style_03:new {
 	lotSize = 1,
 	publicStructure = 1,
-	baseMaintenanceRate = 10,
-	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
+	baseMaintenanceRate = 5,
+	allowedZones = {"corellia", "dantooine", "dathomir", "endor", "lok", "naboo", "rori", "talus", "tatooine", "yavin4"},
 	length = 3,
 	width = 3,
 	alwaysPublic = 1,

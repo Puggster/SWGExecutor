@@ -49,10 +49,10 @@ which carries forward this exception.
 	--------------------
 --]]
 --The amount of time in minutes before the city specialization may be changed again.
-CitySpecializationCooldown = 604800000
+CitySpecializationCooldown = 1
 
 --The amount of time in minutes before another withdrawal from the city treasury may be made.
-TreasuryWithdrawalCooldown = 86400000
+TreasuryWithdrawalCooldown = 1
 
 --The number of city update cycles that must pass before mayoral voting process is complete.
 CityVotingCycles = 1
@@ -73,16 +73,16 @@ OldCityGracePeriod = 4320
 EnableCityWarn = false
 
 --The number of citizens required to achieve each city rank. (Outpost, Village, Township, City, Metropolis)
-CitizensPerRank = {1, 2, 4, 8, 16}
+CitizensPerRank = {1, 1, 1, 1, 1}
 --CitizensPerRank = {10, 20, 35, 55, 85}
 
 --The radius in meters of the city at each city rank. (Outpost, Village, Township, City, Metropolis)
 RadiusPerRank = {150, 200, 300, 400, 450}
 
 -- Maximum for each rank.  ex. rank 1 = DecorationsPerRank * 1, rank 5 = DecorationsPerRank * 5
-DecorationsPerRank = 10
-TrainersPerRank = 7
-MissionTerminalsPerRank = 3
+DecorationsPerRank = 15
+TrainersPerRank = 15
+MissionTerminalsPerRank = 15
 
 -- Amount to discount city maintenance  float.  1 = 100%, .75 =75%, .5=50% etc
 maintenanceDiscount = 1.0
@@ -95,16 +95,16 @@ maintenanceDiscount = 1.0
 	The maximum amount of cities per rank is 255.
 --]]
 CitiesAllowed = {
-	{"corellia", {20, 20, 15, 10, 10}},
+	{"corellia", {50, 50, 30, 20, 20}},
 	{"dantooine", {50, 50, 30, 20, 20}},
-	{"dathomir", {0, 0, 0, 0, 0}},
-	{"endor", {0, 0, 0, 0, 0}},
+	{"dathomir", {50, 50, 30, 20, 20}},
+	{"endor", {50, 50, 30, 20, 20}},
 	{"lok", {50, 50, 30, 20, 20}},
-	{"naboo", {20, 20, 15, 10, 10}},
+	{"naboo", {50, 50, 30, 20, 20}},
 	{"rori", {50, 50, 30, 20, 20}},
 	{"talus", {50, 50, 30, 20, 20}},
-	{"tatooine", {20, 20, 15, 10, 10}},
-	{"yavin4", {0, 0, 0, 0, 0}}
+	{"tatooine", {50, 50, 30, 20, 20}},
+	{"yavin4", {50, 50, 30, 20, 20}},
 }
 
 
@@ -184,70 +184,20 @@ CityTaxes = {
 	====================
 --]]
 CitySpecializations = {
-	{--Sample Rich
-		name = "@city/city:city_spec_sample_rich",
-		cost = 70000,
-		skillMods = {
-			{"private_spec_samplesize", 20},
-			{"private_spec_samplerate", 10}
-		}
-	},
-	{--Manufacturing Center
-		name = "@city/city:city_spec_industry",
-		cost = 50000,
-		skillMods = {
-			{"private_spec_assembly", 10}
-		}
-	},
-	{--Medical Center
-		name = "@city/city:city_spec_doctor",
-		cost = 80000,
-		skillMods = {
-			{"private_medical_rating", 10}
-		}
-	},
-	{--Clone Lab
-		name = "@city/city:city_spec_cloning",
-		cost = 80000,
-		skillMods = {
-			{"private_spec_cloning", 20}
-		}
-	},
-	{--Research Center
-		name = "@city/city:city_spec_research",
-		cost = 125000,
-		skillMods = {
-			{"private_spec_experimentation", 15}
-		}
-	},
 	{--Improved Job Market
 		name = "@city/city:city_spec_missions",
-		cost = 80000,
+		cost = 500,
 		skillMods = {
-			{"private_spec_missions", 15}
-		}
-	},
-	{--Entertainment District
-		name = "@city/city:city_spec_entertainer",
-		cost = 80000,
-		skillMods = {
-			{"private_spec_entertainer", 10}
-		}
-	},
-	{--Manufacturing Center
-		name = "@city/city:city_spec_master_manufacturing",
-		cost = 150000,
-		skillMods = {
+			{"private_spec_missions", 15},
+			{"private_spec_samplesize", 20},
+			{"private_spec_samplerate", 10},
 			{"private_spec_assembly", 10},
-			{"private_spec_experimentation", 15}
-		}
-	},
-	{--Scientific Society
-		name = "@city/city:city_spec_master_healing",
-		cost = 150000,
-		skillMods = {
+			{"private_medical_rating", 10},
+			{"private_spec_cloning", 20},
+			{"private_spec_experimentation", 15},
 			{"private_spec_entertainer", 10},
 			{"private_medical_rating", 10}
+
 		}
 	},
 }

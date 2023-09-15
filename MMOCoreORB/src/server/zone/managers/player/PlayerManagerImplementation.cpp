@@ -1577,13 +1577,13 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 				if (obj->getOptionsBitmask() & OptionBitmask::INSURED) {
 					//1% Decay for insured items
-					obj->inflictDamage(obj, 0, 0.01 * obj->getMaxCondition(), true, true);
+					obj->inflictDamage(obj, 0, 0.00 * obj->getMaxCondition(), true, true);
 					//Set uninsured
 					uint32 bitmask = obj->getOptionsBitmask() - OptionBitmask::INSURED;
 					obj->setOptionsBitmask(bitmask);
 				} else {
 					//5% Decay for uninsured items
-					obj->inflictDamage(obj, 0, 0.05 * obj->getMaxCondition(), true, true);
+					obj->inflictDamage(obj, 0, 0.01 * obj->getMaxCondition(), true, true);
 				}
 
 				// Calculate condition percentage for decay report
@@ -1615,13 +1615,13 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		int xpLoss = (int)(jediXpCap * -0.15);
 		int curExp = ghost->getExperience("jedi_general");
 
-		int negXpCap = -10000000; // Cap on negative jedi experience
+		int negXpCap = -100000; // Cap on negative jedi experience
 
 		if ((curExp + xpLoss) < negXpCap)
 			xpLoss = negXpCap - curExp;
 
-		if (xpLoss < -2000000)
-			xpLoss = -2000000;
+		if (xpLoss < -20000)
+			xpLoss = -20000;
 
 
 		awardExperience(player, "jedi_general", xpLoss, true);

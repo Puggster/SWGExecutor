@@ -328,8 +328,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	auto client = callback->getClient();
 
-	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 8) {
-		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 8 characters per galaxy.", 0x0);
+	if (client->getCharacterCount(zoneServer.get()->getGalaxyID()) >= 10) {
+		ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are limited to 10 characters per galaxy.", 0x0);
 		client->sendMessage(errMsg);
 
 		return false;
@@ -483,8 +483,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 							Time timeVal(sec);
 
-							if (timeVal.miliDifference() < 720000) {
-								ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per 20 mins. Repeat attempts prior to 20 minutes elapsing will reset the timer.", 0x0);
+							if (timeVal.miliDifference() < 60) {
+								ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per 60 seconds. Repeat attempts prior to 60 seconds elapsing will reset the timer.", 0x0);
 								client->sendMessage(errMsg);
 
 								playerCreature->destroyPlayerCreatureFromDatabase(true);
@@ -500,8 +500,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 					if (lastCreatedCharacter.containsKey(accID)) {
 						Time lastCreatedTime = lastCreatedCharacter.get(accID);
 
-						if (lastCreatedTime.miliDifference() < 720000) {
-							ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per 20 mins. Repeat attempts prior to 20 minutes elapsing will reset the timer.", 0x0);
+						if (lastCreatedTime.miliDifference() < 60) {
+							ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character per 60 seconds. Repeat attempts prior to 60 seconds elapsing will reset the timer.", 0x0);
 							client->sendMessage(errMsg);
 
 							playerCreature->destroyPlayerCreatureFromDatabase(true);
@@ -576,10 +576,10 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
 	box->setPromptTitle("PLEASE NOTE");
-	box->setPromptText("You are limited to creating one character per 20 minutes. Attempting to create another character or deleting your character before the 20 minute timer expires will reset the timer.");
+	box->setPromptText("You are limited to creating one character per 60 seconds. Attempting to create another character or deleting your character before the 60 seconds timer expires will reset the timer.");
 	String playerName = playerCreature->getFirstName();
 	StringBuffer zBroadcast;
-	zBroadcast << "\\#00ace6" << playerName << " \\#ffb90f Has Joined Aftermath!";
+	zBroadcast << "\\#00ace6" << playerName << " \\#ffb90f Has Joined Executor!";
 	playerCreature->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 
 	ghost->addSuiBox(box);

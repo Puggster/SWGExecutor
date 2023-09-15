@@ -44,7 +44,7 @@
 --GENERAL PLAYER SETTINGS
 -----------------------------------
 
-onlineCharactersPerAccount = 3 --How many characters are allowed online from a single account.
+onlineCharactersPerAccount = 6 --How many characters are allowed online from a single account.
 
 allowSameAccountPvpRatingCredit = 0
 
@@ -55,137 +55,137 @@ performanceDuration = 5400 -- in seconds
 medicalDuration = 5400 -- in seconds
 
 --Cheap Buffs
-cheapPerformanceBuff = 400
-cheapMedicalBuff = 750
+cheapPerformanceBuff = 800
+cheapMedicalBuff = 800
 
 --Expensive Buffs
-expensivePerformanceBuff = 800
-expensivePerformanceSubBuff = 400
-expensiveMedicalBuff = 1750
-expensiveMedicalSubBuff = 1900
+expensivePerformanceBuff = 1000
+expensivePerformanceSubBuff = 1000
+expensiveMedicalBuff = 1500
+expensiveMedicalSubBuff = 1500
 
 --Sets the experience multiplier while grouped
 groupExpMultiplier = 1.2
 
 --Sets a global experience multiplier
-globalExpMultiplier = 6
+globalExpMultiplier = 8
 
 --Sets the base number of control devices of each type that a player can have in their datapad at once
 --For creature pets, A Creature Handler will have the base number + their stored pets skill mod as limit
-baseStoredCreaturePets = 2
-baseStoredFactionPets = 3
-baseStoredDroids = 5
-baseStoredVehicles = 3
-baseStoredShips = 3
+baseStoredCreaturePets = 25
+baseStoredFactionPets = 25
+baseStoredDroids = 25
+baseStoredVehicles = 25
+baseStoredShips = 25
 
 -----------------------------------
 --VETERAN REWARDS CONFIG
 -----------------------------------
-veteranRewardMilestones = {30, 60, 90, 120, 150, 180, 310, 340, 370, 400, 430, 460} --days, must be sorted low to high
+veteranRewardMilestones = {0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55} --days, must be sorted low to high
 
-veteranRewardAdditionalMilestones = 30 --frequency, in days, of additional milestones (beyond the established ones)
+veteranRewardAdditionalMilestones = 5 --frequency, in days, of additional milestones (beyond the established ones)
 
 veteranRewards = {
 
 		-- 30 Day Rewards
-		--{templateFile = "object/tangible/veteran_reward/harvester.iff", milestone=90, oneTime=true, description="@veteran_new:poweredharvester"},
-		--{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=30, oneTime=true, description="@veteran_new:resourcecrate"},
-		{templateFile = "object/tangible/veteran_reward/data_terminal_s1.iff", milestone=30, oneTime=false, description="@veteran_new:dataterminal1"},
-		{templateFile = "object/tangible/veteran_reward/data_terminal_s2.iff", milestone=30, oneTime=false, description="@veteran_new:dataterminal2"},
-		{templateFile = "object/tangible/veteran_reward/data_terminal_s3.iff", milestone=30, oneTime=false, description="@veteran_new:dataterminal3"},
-		{templateFile = "object/tangible/veteran_reward/data_terminal_s4.iff", milestone=30, oneTime=false, description="@veteran_new:dataterminal4"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_protocol_droid_toy.iff", milestone=30, oneTime=false, description="@veteran_new:mini_protocoldroid"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_r2_toy.iff", milestone=30, oneTime=false, description="@veteran_new:mini_r2"},
+		{templateFile = "object/tangible/veteran_reward/harvester.iff", milestone=0, oneTime=false, description="@veteran_new:poweredharvester"},
+		{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=0, oneTime=false, description="@veteran_new:resourcecrate"},
+		{templateFile = "object/tangible/veteran_reward/data_terminal_s1.iff", milestone=0, oneTime=false, description="@veteran_new:dataterminal1"},
+		{templateFile = "object/tangible/veteran_reward/data_terminal_s2.iff", milestone=0, oneTime=false, description="@veteran_new:dataterminal2"},
+		{templateFile = "object/tangible/veteran_reward/data_terminal_s3.iff", milestone=0, oneTime=false, description="@veteran_new:dataterminal3"},
+		{templateFile = "object/tangible/veteran_reward/data_terminal_s4.iff", milestone=0, oneTime=false, description="@veteran_new:dataterminal4"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_protocol_droid_toy.iff", milestone=0, oneTime=false, description="@veteran_new:mini_protocoldroid"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_r2_toy.iff", milestone=0, oneTime=false, description="@veteran_new:mini_r2"},
 
 		-- 180 Day Rewards
-		--{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=180, oneTime=true, description="@veteran_new:resourcecrate"},
-		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff", milestone=60, oneTime=false, description="@veteran_new:falconcouch"},
-		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff", milestone=60, oneTime=false, description="@veteran_new:falconchair"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff", milestone=60, oneTime=false, description="@veteran_new:mini_tiefighter"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_x_wing_toy.iff", milestone=60, oneTime=false, description="@veteran_new:mini_xwing"},
+		{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=5, oneTime=false, description="@veteran_new:resourcecrate"},
+		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff", milestone=5, oneTime=false, description="@veteran_new:falconcouch"},
+		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff", milestone=5, oneTime=false, description="@veteran_new:falconchair"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff", milestone=5, oneTime=false, description="@veteran_new:mini_tiefighter"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_x_wing_toy.iff", milestone=5, oneTime=false, description="@veteran_new:mini_xwing"},
 
 		-- 270 Day Rewards
-		{templateFile = "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff", milestone=90, oneTime=true},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s01.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 1"},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s02.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 2"},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s03.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 3"},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s04.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 4"},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s05.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 5"},
-		{templateFile = "object/tangible/wearables/goggles/goggles_s06.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 6"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_darth_vader_toy.iff", milestone=90, oneTime=false, description="@veteran_new:mini_darthvader"},
+		{templateFile = "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff", milestone=10, oneTime=false},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s01.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 1"},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s02.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 2"},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s03.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 3"},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s04.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 4"},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s05.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 5"},
+		{templateFile = "object/tangible/wearables/goggles/goggles_s06.iff", milestone=10, oneTime=false, description="Special Edition Goggles Style 6"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_darth_vader_toy.iff", milestone=10, oneTime=false, description="@veteran_new:mini_darthvader"},
 
 		-- 360 Day Rewards
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_a"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_b.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_b"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_c"},
-		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_d"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_jabba_toy.iff", milestone=120, oneTime=false, description="@veteran_new:mini_jabba"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=120, oneTime=false, description="@veteran_new:mini_stormtrooper"},
-		--{templateFile = "object/tangible/veteran_reward/antidecay.iff", milestone=360, oneTime=true, description="@veteran_new:antidecay"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=15, oneTime=false, description="@veteran_new:techconsole_a"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_b.iff", milestone=15, oneTime=false, description="@veteran_new:techconsole_b"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=15, oneTime=false, description="@veteran_new:techconsole_c"},
+		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=15, oneTime=false, description="@veteran_new:techconsole_d"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_jabba_toy.iff", milestone=15, oneTime=false, description="@veteran_new:mini_jabba"},
+		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=15, oneTime=false, description="@veteran_new:mini_stormtrooper"},
+		{templateFile = "object/tangible/veteran_reward/antidecay.iff", milestone=15, oneTime=false, description="@veteran_new:antidecay"},
 
 		-- 450 Day Rewards
-		{templateFile = "object/tangible/camp/camp_spit_s2.iff", milestone=150, oneTime=false, description="Camp Center (Small)"},
-		{templateFile = "object/tangible/camp/camp_spit_s3.iff", milestone=150, oneTime=false, description="Camp Center (Large)"},
-		{templateFile = "object/tangible/furniture/tatooine/frn_tato_vase_style_01.iff", milestone=150, oneTime=false, description="Gold Ornamental Vase (Style 1)"},
-		{templateFile = "object/tangible/furniture/tatooine/frn_tato_vase_style_02.iff", milestone=150, oneTime=false, description="Gold Ornamental Vase (Style 2)"},
-		{templateFile = "object/tangible/furniture/decorative/foodcart.iff", milestone=150, oneTime=false, description="Foodcart"},
-		{templateFile = "object/tangible/furniture/all/frn_bench_generic.iff", milestone=150, oneTime=false, description="Park Bench"},
+		{templateFile = "object/tangible/camp/camp_spit_s2.iff", milestone=20, oneTime=false, description="Camp Center (Small)"},
+		{templateFile = "object/tangible/camp/camp_spit_s3.iff", milestone=20, oneTime=false, description="Camp Center (Large)"},
+		{templateFile = "object/tangible/furniture/tatooine/frn_tato_vase_style_01.iff", milestone=20, oneTime=false, description="Gold Ornamental Vase (Style 1)"},
+		{templateFile = "object/tangible/furniture/tatooine/frn_tato_vase_style_02.iff", milestone=20, oneTime=false, description="Gold Ornamental Vase (Style 2)"},
+		{templateFile = "object/tangible/furniture/decorative/foodcart.iff", milestone=20, oneTime=false, description="Foodcart"},
+		{templateFile = "object/tangible/furniture/all/frn_bench_generic.iff", milestone=20, oneTime=false, description="Park Bench"},
 
 		-- 540 Day Rewards
-		{templateFile = "object/tangible/furniture/decorative/professor_desk.iff", milestone=180, oneTime=false, description="Professor Desk"},
-		{templateFile = "object/tangible/furniture/decorative/diagnostic_screen.iff", milestone=180, oneTime=false, description="@frn_n:diagnostic_screen"},
-		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s2.iff", milestone=180, oneTime=false, description="Large Potted Plant (Style 2)"},
-		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s3.iff", milestone=180, oneTime=false, description="Large Potted Plant (Style 3)"},
-		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s4.iff", milestone=180, oneTime=false, description="Large Potted Plant (Style 4)"},
+		{templateFile = "object/tangible/furniture/decorative/professor_desk.iff", milestone=25, oneTime=false, description="Professor Desk"},
+		{templateFile = "object/tangible/furniture/decorative/diagnostic_screen.iff", milestone=25, oneTime=false, description="@frn_n:diagnostic_screen"},
+		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s2.iff", milestone=25, oneTime=false, description="Large Potted Plant (Style 2)"},
+		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s3.iff", milestone=25, oneTime=false, description="Large Potted Plant (Style 3)"},
+		{templateFile = "object/tangible/furniture/all/frn_all_plant_potted_lg_s4.iff", milestone=25, oneTime=false, description="Large Potted Plant (Style 4)"},
 
 		-- 630 Day Rewards
-		{templateFile = "object/tangible/furniture/modern/bar_counter_s1.iff", milestone=310, oneTime=false, description="Bar Countertop"},
-		{templateFile = "object/tangible/furniture/modern/bar_piece_curve_s1.iff", milestone=310, oneTime=false, description="Bar Countertop (Curved, Style 1)"},
-		{templateFile = "object/tangible/furniture/modern/bar_piece_curve_s2.iff", milestone=310, oneTime=false, description="Bar Countertop (Curved, Style 2)"},
-		{templateFile = "object/tangible/furniture/modern/bar_piece_straight_s1.iff", milestone=310, oneTime=false, description="Bar Countertop (Straight, Style 1)"},
-		{templateFile = "object/tangible/furniture/modern/bar_piece_straight_s2.iff", milestone=310, oneTime=false, description="Bar Countertop (Straight, Style 2)"},
+		{templateFile = "object/tangible/furniture/modern/bar_counter_s1.iff", milestone=30, oneTime=false, description="Bar Countertop"},
+		{templateFile = "object/tangible/furniture/modern/bar_piece_curve_s1.iff", milestone=30, oneTime=false, description="Bar Countertop (Curved, Style 1)"},
+		{templateFile = "object/tangible/furniture/modern/bar_piece_curve_s2.iff", milestone=30, oneTime=false, description="Bar Countertop (Curved, Style 2)"},
+		{templateFile = "object/tangible/furniture/modern/bar_piece_straight_s1.iff", milestone=30, oneTime=false, description="Bar Countertop (Straight, Style 1)"},
+		{templateFile = "object/tangible/furniture/modern/bar_piece_straight_s2.iff", milestone=30, oneTime=false, description="Bar Countertop (Straight, Style 2)"},
 
 		-- 720 Day Rewards
-		{templateFile = "object/tangible/furniture/all/frn_all_table_s01.iff", milestone=340, oneTime=false, description="Round Cantina Table (Style 1)"},
-		{templateFile = "object/tangible/furniture/all/frn_all_table_s02.iff", milestone=340, oneTime=false, description="Round Cantina Table (Style 2)"},
-		{templateFile = "object/tangible/furniture/all/frn_all_table_s03.iff", milestone=340, oneTime=false, description="Round Cantina Table (Style 3)"},
-		{templateFile = "object/tangible/furniture/tatooine/frn_tatt_chair_cantina_seat_2.iff", milestone=340, oneTime=false, description="Large Cantina Sofa"},
-		{templateFile = "object/tangible/furniture/tatooine/frn_tato_cafe_parasol.iff", milestone=340, oneTime=false, description="@frn_n:frn_tato_cafe_parasol"},
+		{templateFile = "object/tangible/furniture/all/frn_all_table_s01.iff", milestone=35, oneTime=false, description="Round Cantina Table (Style 1)"},
+		{templateFile = "object/tangible/furniture/all/frn_all_table_s02.iff", milestone=35, oneTime=false, description="Round Cantina Table (Style 2)"},
+		{templateFile = "object/tangible/furniture/all/frn_all_table_s03.iff", milestone=35, oneTime=false, description="Round Cantina Table (Style 3)"},
+		{templateFile = "object/tangible/furniture/tatooine/frn_tatt_chair_cantina_seat_2.iff", milestone=35, oneTime=false, description="Large Cantina Sofa"},
+		{templateFile = "object/tangible/furniture/tatooine/frn_tato_cafe_parasol.iff", milestone=35, oneTime=false, description="@frn_n:frn_tato_cafe_parasol"},
 
 		-- 810 Day Rewards
-		{templateFile = "object/tangible/furniture/modern/rug_oval_m_s02.iff", milestone=370, oneTime=false, description="Medium Oval Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_oval_sml_s01.iff", milestone=370, oneTime=false, description="Small Oval Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_rect_m_s01.iff", milestone=370, oneTime=false, description="Medium Rectangular Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_rect_sml_s01.iff", milestone=370, oneTime=false, description="Small Rectangular Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_rnd_m_s01.iff", milestone=370, oneTime=false, description="Medium Round Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_rnd_sml_s01.iff", milestone=370, oneTime=false, description="Small Round Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_oval_m_s02.iff", milestone=40, oneTime=false, description="Medium Oval Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_oval_sml_s01.iff", milestone=40, oneTime=false, description="Small Oval Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_rect_m_s01.iff", milestone=40, oneTime=false, description="Medium Rectangular Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_rect_sml_s01.iff", milestone=40, oneTime=false, description="Small Rectangular Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_rnd_m_s01.iff", milestone=40, oneTime=false, description="Medium Round Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_rnd_sml_s01.iff", milestone=40, oneTime=false, description="Small Round Rug"},
 
 		-- 900 Day Rewards
-		{templateFile = "object/tangible/loot/misc/loot_skull_bith.iff", milestone=400, oneTime=false, description="A Bith Skull"},
-		{templateFile = "object/tangible/loot/misc/loot_skull_human.iff", milestone=400, oneTime=false, description="A Human Skull"},
-		{templateFile = "object/tangible/loot/misc/loot_skull_ithorian.iff", milestone=400, oneTime=false, description="A Ithorian Skull"},
-		{templateFile = "object/tangible/loot/misc/loot_skull_thune.iff", milestone=400, oneTime=false, description="A Thune Skull"},
-		{templateFile = "object/tangible/loot/misc/loot_skull_voritor.iff", milestone=400, oneTime=false, description="A Voritor Lizard Skull"},
-		--{templateFile = "object/tangible/wearables/helmet/helmet_s06.iff", milestone=400, oneTime=true, description="Rebel Endor Helmet"},
+		{templateFile = "object/tangible/loot/misc/loot_skull_bith.iff", milestone=45, oneTime=false, description="A Bith Skull"},
+		{templateFile = "object/tangible/loot/misc/loot_skull_human.iff", milestone=45, oneTime=false, description="A Human Skull"},
+		{templateFile = "object/tangible/loot/misc/loot_skull_ithorian.iff", milestone=45, oneTime=false, description="A Ithorian Skull"},
+		{templateFile = "object/tangible/loot/misc/loot_skull_thune.iff", milestone=45, oneTime=false, description="A Thune Skull"},
+		{templateFile = "object/tangible/loot/misc/loot_skull_voritor.iff", milestone=45, oneTime=false, description="A Voritor Lizard Skull"},
+		{templateFile = "object/tangible/wearables/helmet/helmet_s06.iff", milestone=45, oneTime=false, description="Rebel Endor Helmet"},
 
 		-- 990 Day Rewards
-		{templateFile = "object/tangible/furniture/modern/rug_rect_lg_s01.iff", milestone=430, oneTime=false, description="Large Rectangular Rug (Style 1)"},
-		{templateFile = "object/tangible/furniture/modern/rug_rect_lg_s02.iff", milestone=430, oneTime=false, description="Large Rectangular Rug (Style 2)"},
-		{templateFile = "object/tangible/furniture/modern/rug_oval_lg_s01.iff", milestone=430, oneTime=false, description="Large Oval Rug"},
-		{templateFile = "object/tangible/furniture/modern/rug_rnd_lg_s01.iff", milestone=430, oneTime=false, description="Large Round Rug"},
-		{templateFile = "object/tangible/furniture/all/frn_all_desk_map_table.iff", milestone=430, oneTime=false, description="Round Data Terminal"},
-		--{templateFile = "object/tangible/wearables/armor/nightsister/armor_nightsister_bicep_r_s01.iff", milestone=430, oneTime=true, description="Nightsister Melee Armguard"},
+		{templateFile = "object/tangible/furniture/modern/rug_rect_lg_s01.iff", milestone=50, oneTime=false, description="Large Rectangular Rug (Style 1)"},
+		{templateFile = "object/tangible/furniture/modern/rug_rect_lg_s02.iff", milestone=50, oneTime=false, description="Large Rectangular Rug (Style 2)"},
+		{templateFile = "object/tangible/furniture/modern/rug_oval_lg_s01.iff", milestone=50, oneTime=false, description="Large Oval Rug"},
+		{templateFile = "object/tangible/furniture/modern/rug_rnd_lg_s01.iff", milestone=50, oneTime=false, description="Large Round Rug"},
+		{templateFile = "object/tangible/furniture/all/frn_all_desk_map_table.iff", milestone=50, oneTime=false, description="Round Data Terminal"},
+		{templateFile = "object/tangible/wearables/armor/nightsister/armor_nightsister_bicep_r_s01.iff", milestone=50, oneTime=false, description="Nightsister Melee Armguard"},
 
 		-- 1080 Day Rewards
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_01.iff", milestone=460, oneTime=false, description="Painting: Cast Wing in Flight"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff", milestone=460, oneTime=false, description="Painting: Decimator"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_03.iff", milestone=460, oneTime=false, description="Painting: Tatooine Dune Speeder"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_04.iff", milestone=460, oneTime=false, description="Painting: Weapon of War"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_05.iff", milestone=460, oneTime=false, description="Painting: Fighter Study"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_06.iff", milestone=460, oneTime=false, description="Painting: Hutt Greed"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_07.iff", milestone=460, oneTime=false, description="Painting: Smuggler's Run"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff", milestone=460, oneTime=false, description="Painting: Imperial Oppression (TIE Oppressor)"},
-		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff", milestone=460, oneTime=false, description="Painting: Emperor's Eyes (TIE Sentinel)"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_01.iff", milestone=55, oneTime=false, description="Painting: Cast Wing in Flight"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff", milestone=55, oneTime=false, description="Painting: Decimator"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_03.iff", milestone=55, oneTime=false, description="Painting: Tatooine Dune Speeder"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_04.iff", milestone=55, oneTime=false, description="Painting: Weapon of War"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_05.iff", milestone=55, oneTime=false, description="Painting: Fighter Study"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_06.iff", milestone=55, oneTime=false, description="Painting: Hutt Greed"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_07.iff", milestone=55, oneTime=false, description="Painting: Smuggler's Run"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff", milestone=55, oneTime=false, description="Painting: Imperial Oppression (TIE Oppressor)"},
+		{templateFile = "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff", milestone=55, oneTime=false, description="Painting: Emperor's Eyes (TIE Sentinel)"},
 
 }
 

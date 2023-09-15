@@ -230,10 +230,10 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 		Reference<CallPetTask*> callPet = new CallPetTask(_this.getReferenceUnsafeStaticCast(), player, "call_pet");
 
 		StringIdChatParameter message("pet/pet_menu", "call_pet_delay"); // Calling pet in %DI seconds. Combat will terminate pet call.
-		message.setDI(5);
+		message.setDI(1);
 		player->sendSystemMessage(message);
 
-		player->addPendingTask("call_pet", callPet, 5 * 1000);
+		player->addPendingTask("call_pet", callPet, 1 * 1000);
 
 		if (petControlObserver == nullptr) {
 			petControlObserver = new PetControlObserver(_this.getReferenceUnsafeStaticCast());
@@ -498,14 +498,14 @@ void PetControlDeviceImplementation::storeObject(CreatureObject* player, bool fo
 
 	Reference<StorePetTask*> task = new StorePetTask(player, pet);
 
-	// Store non-faction pets immediately.  Store faction pets after 60sec delay.
+	// Store non-faction pets immediately.  Store faction pets after 2 sec delay.
 	if (petType != PetManager::FACTIONPET || force || player->getPlayerObject()->isPrivileged()) {
 		task->execute();
 	}
 	else {
 		if (pet->getPendingTask("store_pet") == nullptr) {
-			player->sendSystemMessage( "Storing pet in 60 seconds");
-			pet->addPendingTask("store_pet", task, 60 * 1000);
+			player->sendSystemMessage( "Storing pet in 2 seconds");
+			pet->addPendingTask("store_pet", task, 2 * 1000);
 		}
 		else {
 			AtomicTime nextExecution;
@@ -545,7 +545,7 @@ bool PetControlDeviceImplementation::growPet(CreatureObject* player, bool force,
 
 	Time currentTime;
 	uint32 timeDelta = currentTime.getTime() - lastGrowth.getTime();
-	int stagesToGrow = timeDelta / 21600; // 6 hour
+	int stagesToGrow = timeDelta / 60; // 60 seconds
 
 	if (adult)
 		stagesToGrow = 10;
