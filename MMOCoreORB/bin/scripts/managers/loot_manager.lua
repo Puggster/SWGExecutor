@@ -70,7 +70,7 @@ lootableArmorAttachmentStatMods = {
 	"berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+--  "camouflage",
 	"carbine_accuracy",
 	"carbine_hit_while_moving",
 	"carbine_speed",
